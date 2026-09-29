@@ -35,7 +35,7 @@ agent = create_deep_agent(
         FilesystemMiddleware(
             backend=backend
         ),
-        # 长上下文压缩
+        #长上下文压缩
         SummarizationMiddleware(
             model=model,
             backend=backend,
@@ -47,7 +47,7 @@ agent = create_deep_agent(
             # 保留最近20轮消息
             keep=(
                 "messages",
-                20
+                3
             ),
         ),
     ],
@@ -126,8 +126,25 @@ agent = create_deep_agent(
 
 """
 )
+# #流式测试
+# for chunk in agent.stream(
+#     {
+#         "messages":[
+#             {
+#                 "role":"user",
+#                 "content":
+#                 """
+#                 请调研 Agent 开发领域的三大 Harness 框架
+#                 """
+#             }
+#         ]
+#     },
+#     stream_mode="values"
+# ):
 
-# 发起一个需要规划的复杂任务
+#     print(chunk)
+
+#发起一个需要规划的复杂任务
 result = agent.invoke({
     "messages": [{
         "role": "user",
