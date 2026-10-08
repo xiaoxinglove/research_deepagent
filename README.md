@@ -2,6 +2,10 @@
 
 本项目包含浏览器研究应用、第二至第七章的能力练习，以及第八章 CoursePilot 课程学习与答疑助教。它们共用根目录的 Python 依赖，但运行入口、配置和验收范围各自独立。
 
+下图展示第八章 CoursePilot 的实际离线演示：从学习目标出发，完成任务规划、两个子 Agent 协作、跨进程记忆和人工审批。Research Web 的运行方式见后文。
+
+![CoursePilot 离线演示总览：任务规划、两个子 Agent、跨进程记忆与人工审批](src/chapter08/artifacts/demo/overview.jpg)
+
 | 使用目标 | 当前入口 | 配置与详细说明 |
 | --- | --- | --- |
 | 浏览器提交研究问题，查看规划、工具调用与引用报告 | 项目根目录执行 `uvx agentseek dev` | 根 `.env`、`frontend/.env`；启动行为由 [.agentseek/lifecycle.toml](.agentseek/lifecycle.toml) 声明 |
@@ -295,6 +299,12 @@ npm --prefix frontend run build
 | CoursePilot 真实模型 | [真实流程验证](src/chapter08/artifacts/api-workflow-check.json) 覆盖规划、两个子 Agent、审批中断与拒绝后无报告，记录耗时 145.5 秒；真实批准保存和教学质量尚未据此验收 |
 | 演示与实际反馈 | [演示页面](src/chapter08/artifacts/demo/demo.html)、[演示脚本](src/chapter08/docs/DEMO_SCRIPT.md)、[FEEDBACK.md](src/chapter08/docs/FEEDBACK.md)；匿名项目用户反馈「5 分：清楚」「当前演示已够用」 |
 | Research Web 联调 | 待按快速启动验证健康检查、规划、搜索、子 Agent、最终引用与会话恢复；目前未留存对应整体验收记录 |
+
+以下是 CoursePilot 离线演示的两种审批结果；批准后保存报告，拒绝后不创建 `report.md`。完整正文和工具轨迹可在上方演示页面中展开查看。
+
+| 批准：报告已保存 | 拒绝：未创建报告 |
+| --- | --- |
+| ![CoursePilot 离线批准分支：已保存的学习报告](src/chapter08/artifacts/demo/approved-report.jpg) | ![CoursePilot 离线拒绝分支：未创建 report.md](src/chapter08/artifacts/demo/rejected-report.jpg) |
 
 离线脚本证明流程与执行层约束，不证明真实模型教学质量或全面抵御提示注入。`summary.json` 中的 `live_model_validation=not_run` 是首次离线演示的历史状态，后续真实调用应以独立 API 验证文件为准。
 
