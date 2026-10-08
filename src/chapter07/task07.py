@@ -10,10 +10,6 @@ from langgraph.store.memory import InMemoryStore
 from langgraph.types import Command
 load_dotenv()
 
-# ============================================================
-# 1. 模型
-# ============================================================
-
 model = ChatOpenAI(
     model="zai-org/GLM-5.3",
     api_key=os.getenv("GLM_API_KEY"),
@@ -21,14 +17,8 @@ model = ChatOpenAI(
     temperature=0
 )
 
-# ============================================================
-# 2. 跨对话长期记忆
-# ============================================================
-
 store = InMemoryStore()
-
 USER_NAMESPACE = ("user-123", "memories")
-
 # Agent 看到的虚拟路径
 MEMORY_PATH = "/memories/preferences.md"
 
@@ -57,15 +47,7 @@ backend = CompositeBackend(
     },
 )
 
-
-# ============================================================
-# 3. 敏感工具
-#    这里只模拟发邮件，不会真的发送邮件
-# ============================================================
-
 sent_emails = []
-
-
 @tool
 def send_email(to: str, subject: str, body: str) -> str:
     """发送邮件。"""
@@ -83,11 +65,7 @@ def send_email(to: str, subject: str, body: str) -> str:
 
     return f"邮件已发送至 {to}"
 
-
-# ============================================================
-# 4. 创建 Deep Agent
-# ============================================================
-
+# 创建 Deep Agent
 agent = create_deep_agent(
     model=model,
     tools=[send_email],
@@ -136,11 +114,7 @@ agent = create_deep_agent(
 """,
 )
 
-
-# ============================================================
 # 工具函数
-# ============================================================
-
 def print_answer(result):
     """打印 Agent 最终回复。"""
     print("Agent：", result.value["messages"][-1].content)
@@ -169,10 +143,7 @@ def get_action(result):
     return action, args
 
 
-# ============================================================
 # 对话 1
-# ============================================================
-
 print("\n")
 print("=" * 60)
 print("对话 1：保存长期记忆")
@@ -206,10 +177,7 @@ result_1 = agent.invoke(
 
 print_answer(result_1)
 
-
-# ============================================================
 # 直接检查 Store
-# ============================================================
 
 saved = store.get(
     USER_NAMESPACE,
@@ -230,14 +198,12 @@ assert "英文" in memory_content
 
 print("✓ 对话 1：长期记忆写入成功")
 
-
-# ============================================================
 # 对话 2
 #
 # 注意：
 # 这是全新的 thread_id。
 # 如果还能读到偏好，就证明记忆跨 Thread。
-# ============================================================
+
 
 print("\n")
 print("=" * 60)
@@ -280,10 +246,6 @@ print("  conversation-002")
 print("  但仍然使用同一个 Store namespace")
 print("  因此长期记忆仍然可见")
 
-
-# ============================================================
-# HITL 1：approve
-# ============================================================
 
 print("\n")
 print("=" * 60)
@@ -329,12 +291,6 @@ print_answer(approved)
 assert sent_emails[-1]["to"] == "alice@example.com"
 
 print("✓ approve：原始参数执行")
-
-
-# ============================================================
-# HITL 2：edit
-# ============================================================
-
 print("\n")
 print("=" * 60)
 print("HITL 演示 2：EDIT")
@@ -387,17 +343,9 @@ edited = agent.invoke(
 )
 
 print_answer(edited)
-
 assert sent_emails[-1]["to"] == "bob@example.com"
-
 print("✓ edit：没有执行模型原始参数")
 print("✓ 实际执行的是人工修改后的参数")
-
-
-# ============================================================
-# HITL 3：reject
-# ============================================================
-
 print("\n")
 print("=" * 60)
 print("HITL 演示 3：REJECT")
@@ -449,11 +397,7 @@ assert len(sent_emails) == before_reject
 
 print("✓ reject：send_email 没有执行")
 
-
-# ============================================================
-# 最终结果
-# ============================================================
-
+# 最终实际执行的邮件
 print("\n")
 print("=" * 60)
 print("最终实际执行的邮件")
