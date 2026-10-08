@@ -1,0 +1,30 @@
+{
+  "snapshot_date": "2026-10-08",
+  "scope": "DeepAgents 课程综合项目；摘要快照，不代表运行时联网结果",
+  "sources": [
+    {
+      "id": "S1",
+      "title": "Deep Agents overview",
+      "url": "https://docs.langchain.com/oss/python/deepagents/overview",
+      "summary": "DeepAgents 基于 LangChain 与 LangGraph，提供任务规划、文件工具和子 Agent 委派。学习时应先跑通最小调用，再观察工具执行与状态变化。"
+    },
+    {
+      "id": "S2",
+      "title": "Subagents",
+      "url": "https://docs.langchain.com/oss/python/deepagents/subagents",
+      "summary": "task 工具将明确子任务委派给专门 Agent。可以使用自定义编译图作为子 Agent；上下文隔离和工具权限需要分别设计。"
+    },
+    {
+      "id": "S3",
+      "title": "Memory",
+      "url": "https://docs.langchain.com/oss/python/deepagents/memory",
+      "summary": "长期记忆必须使用跨会话的存储。memory 参数加载指定文件；用户隔离与持久化生命周期由应用及 backend 决定。"
+    },
+    {
+      "id": "S4",
+      "title": "Human-in-the-loop",
+      "url": "https://docs.langchain.com/oss/python/deepagents/human-in-the-loop",
+      "summary": "interrupt_on 在敏感工具执行前暂停；checkpointer 与稳定 thread_id 支持 Command(resume=...) 恢复。approve、edit、reject 分别执行、修改参数后执行和拒绝执行。"
+    }
+  ]
+}

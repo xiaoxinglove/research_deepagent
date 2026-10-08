@@ -1,0 +1,30 @@
+test_chapter_env_is_exclusive_and_does_not_mutate_process_environment (chapter08.test_project.APISettingsTests.test_chapter_env_is_exclusive_and_does_not_mutate_process_environment) ... ok
+test_empty_chapter_env_and_missing_keys_fail_closed (chapter08.test_project.APISettingsTests.test_empty_chapter_env_and_missing_keys_fail_closed) ... ok
+test_explicit_provider_and_chapter_model_override_alias (chapter08.test_project.APISettingsTests.test_explicit_provider_and_chapter_model_override_alias) ... ok
+test_live_model_and_search_share_one_configuration_snapshot (chapter08.test_project.APISettingsTests.test_live_model_and_search_share_one_configuration_snapshot) ... ok
+test_missing_chapter_env_uses_shell_without_reading_parent_env (chapter08.test_project.APISettingsTests.test_missing_chapter_env_uses_shell_without_reading_parent_env) ... ok
+test_multiple_provider_keys_require_explicit_provider (chapter08.test_project.APISettingsTests.test_multiple_provider_keys_require_explicit_provider) ... ok
+test_offline_session_never_reads_api_configuration (chapter08.test_project.APISettingsTests.test_offline_session_never_reads_api_configuration) ... ok
+test_only_glm_key_selects_glm_and_honors_glm_model (chapter08.test_project.APISettingsTests.test_only_glm_key_selects_glm_and_honors_glm_model) ... ok
+test_provider_model_aliases (chapter08.test_project.APISettingsTests.test_provider_model_aliases) ... ok
+test_approve_saves_exact_reviewed_report_and_completes_plan (chapter08.test_project.CoursePilotTests.test_approve_saves_exact_reviewed_report_and_completes_plan) ... ok
+test_authorization_rejects_replaced_title_or_body (chapter08.test_project.CoursePilotTests.test_authorization_rejects_replaced_title_or_body) ... ok
+test_demo_preserves_existing_materials_and_uses_unique_defaults (chapter08.test_project.CoursePilotTests.test_demo_preserves_existing_materials_and_uses_unique_defaults) ... ok
+test_direct_tool_invocation_cannot_skip_human_authorization (chapter08.test_project.CoursePilotTests.test_direct_tool_invocation_cannot_skip_human_authorization) ... ok
+test_duplicate_publication_fails_without_overwriting_report (chapter08.test_project.CoursePilotTests.test_duplicate_publication_fails_without_overwriting_report) ... ok
+test_edit_saves_new_title_with_unchanged_reviewed_body (chapter08.test_project.CoursePilotTests.test_edit_saves_new_title_with_unchanged_reviewed_body) ... ok
+test_feedback_cli_records_only_supplied_feedback (chapter08.test_project.CoursePilotTests.test_feedback_cli_records_only_supplied_feedback) ... ok
+test_injected_topic_still_waits_for_approval_and_cannot_escape (chapter08.test_project.CoursePilotTests.test_injected_topic_still_waits_for_approval_and_cannot_escape) ... ok
+test_live_cli_scripted_decision_is_rejected_before_model_call (chapter08.test_project.CoursePilotTests.test_live_cli_scripted_decision_is_rejected_before_model_call) ... ok
+test_malicious_research_subagent_has_no_publication_tool (chapter08.test_project.CoursePilotTests.test_malicious_research_subagent_has_no_publication_tool) ... ok
+test_memory_cli_persists_in_new_process_and_isolates_users (chapter08.test_project.CoursePilotTests.test_memory_cli_persists_in_new_process_and_isolates_users) ... ok
+test_polluted_or_corrupt_memory_fails_closed (chapter08.test_project.CoursePilotTests.test_polluted_or_corrupt_memory_fails_closed) ... ok
+test_real_plan_and_two_subagents_execute_before_approval (chapter08.test_project.CoursePilotTests.test_real_plan_and_two_subagents_execute_before_approval) ... ok
+test_reject_has_no_report_and_cannot_retry_publication (chapter08.test_project.CoursePilotTests.test_reject_has_no_report_and_cannot_retry_publication) ... ok
+test_saved_language_and_detail_change_lesson_content (chapter08.test_project.CoursePilotTests.test_saved_language_and_detail_change_lesson_content) ... ok
+test_user_id_traversal_is_rejected_before_memory_write (chapter08.test_project.CoursePilotTests.test_user_id_traversal_is_rejected_before_memory_write) ... ok
+
+----------------------------------------------------------------------
+Ran 25 tests in 8.684s
+
+OK

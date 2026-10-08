@@ -1,0 +1,16 @@
+{
+  "saved": {
+    "language": "zh",
+    "style": "detailed"
+  },
+  "restored_in_new_process": {
+    "language": "zh",
+    "style": "detailed"
+  },
+  "other_user": {
+    "language": "zh",
+    "style": "concise"
+  },
+  "cross_process_pass": true,
+  "user_isolation_pass": true
+}

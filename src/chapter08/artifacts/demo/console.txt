@@ -1,0 +1,7 @@
+CoursePilot offline demonstration
+PASS cross-process memory
+PASS user isolation
+PASS approve: report created
+PASS edit: edited title saved
+PASS reject: no report
+PASS all scenarios: write_todos, two task calls, read_materials, real HITL

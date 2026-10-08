@@ -1,0 +1,29 @@
+{
+  "mode": "offline",
+  "topic": "如何学习 DeepAgents 并完成课程综合项目",
+  "user_id": "alice",
+  "thread_id": "c4dddbb3d97d418ca8c52fa10800d03b",
+  "preferences": {
+    "language": "zh",
+    "style": "detailed"
+  },
+  "decisions": [
+    "reject"
+  ],
+  "published": false,
+  "report": null,
+  "todos": [
+    {
+      "content": "整理官方学习资料",
+      "status": "completed"
+    },
+    {
+      "content": "评审知识缺口与安全风险",
+      "status": "completed"
+    },
+    {
+      "content": "人工拒绝，已取消发布",
+      "status": "completed"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+.data/
+__pycache__/
+artifacts/run-*/
+artifacts/demo-*/
+artifacts/verification-*/
+.env
+src/chapter08/artifacts/demo/.env

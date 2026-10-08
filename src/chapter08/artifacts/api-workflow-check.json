@@ -1,0 +1,26 @@
+{
+  "configuration_source": "src/chapter08/.env",
+  "validated_at": "2026-10-08T21:49:45.218273+08:00",
+  "mode": "live",
+  "streaming": true,
+  "reasoning_effort": "low",
+  "report_action": "test_reject_without_publication",
+  "workflow_verified": true,
+  "approval_interrupt_received": true,
+  "draft_chars": 1957,
+  "no_report_before_approval": true,
+  "delegates": [
+    "course-researcher",
+    "learning-reviewer"
+  ],
+  "tool_counts": {
+    "write_todos": 4,
+    "task": 2,
+    "read_materials": 1
+  },
+  "published": false,
+  "no_report_after_reject": true,
+  "todo_count": 3,
+  "output": "src/chapter08/artifacts/run-live-ready-check-e9fc881f",
+  "elapsed_seconds": 145.5
+}

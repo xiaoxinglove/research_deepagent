@@ -1,0 +1,118 @@
+{
+  "project": "CoursePilot",
+  "mode": "offline scripted model + real DeepAgents graph",
+  "validated_at": "2026-10-08T14:41:50.407910+08:00",
+  "capabilities": [
+    "task_planning",
+    "subagents",
+    "persistent_memory",
+    "human_in_the_loop"
+  ],
+  "memory": {
+    "saved": {
+      "language": "zh",
+      "style": "detailed"
+    },
+    "restored_in_new_process": {
+      "language": "zh",
+      "style": "detailed"
+    },
+    "other_user": {
+      "language": "zh",
+      "style": "concise"
+    },
+    "cross_process_pass": true,
+    "user_isolation_pass": true
+  },
+  "runs": [
+    {
+      "mode": "offline",
+      "topic": "如何学习 DeepAgents 并完成课程综合项目",
+      "user_id": "alice",
+      "thread_id": "49bab7f442cf405da5ccce577700b25a",
+      "preferences": {
+        "language": "zh",
+        "style": "detailed"
+      },
+      "decisions": [
+        "approve"
+      ],
+      "published": true,
+      "report": "report.md",
+      "todos": [
+        {
+          "content": "整理官方学习资料",
+          "status": "completed"
+        },
+        {
+          "content": "评审知识缺口与安全风险",
+          "status": "completed"
+        },
+        {
+          "content": "编写并人工审核学习报告",
+          "status": "completed"
+        }
+      ]
+    },
+    {
+      "mode": "offline",
+      "topic": "如何学习 DeepAgents 并完成课程综合项目",
+      "user_id": "alice",
+      "thread_id": "11db32e020434421945617082cdcf787",
+      "preferences": {
+        "language": "zh",
+        "style": "detailed"
+      },
+      "decisions": [
+        "edit"
+      ],
+      "published": true,
+      "report": "report.md",
+      "todos": [
+        {
+          "content": "整理官方学习资料",
+          "status": "completed"
+        },
+        {
+          "content": "评审知识缺口与安全风险",
+          "status": "completed"
+        },
+        {
+          "content": "编写并人工审核学习报告",
+          "status": "completed"
+        }
+      ]
+    },
+    {
+      "mode": "offline",
+      "topic": "如何学习 DeepAgents 并完成课程综合项目",
+      "user_id": "alice",
+      "thread_id": "c4dddbb3d97d418ca8c52fa10800d03b",
+      "preferences": {
+        "language": "zh",
+        "style": "detailed"
+      },
+      "decisions": [
+        "reject"
+      ],
+      "published": false,
+      "report": null,
+      "todos": [
+        {
+          "content": "整理官方学习资料",
+          "status": "completed"
+        },
+        {
+          "content": "评审知识缺口与安全风险",
+          "status": "completed"
+        },
+        {
+          "content": "人工拒绝，已取消发布",
+          "status": "completed"
+        }
+      ]
+    }
+  ],
+  "external_human_feedback": "received",
+  "live_model_validation": "not_run"
+}

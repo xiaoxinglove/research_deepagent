@@ -1,0 +1,8 @@
+{
+  "configuration_source": "src/chapter08/.env",
+  "probe": "real_api_tool_call",
+  "validated_at": "2026-10-08T21:30:21.261816+08:00",
+  "model_id": "zai-org/GLM-5.3",
+  "api_response_received": true,
+  "tool_call_supported": true
+}
