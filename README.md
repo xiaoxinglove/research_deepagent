@@ -229,7 +229,7 @@ research_deepagent/
 ├── src/chapter05/                # 多 Agent 协作
 ├── src/chapter06/                # Skills 与相关练习
 ├── src/chapter07/                # 记忆与人工审批
-├── src/chapter08/                # CoursePilot 独立 CLI
+├── src/chapter08-demo/                # CoursePilot 独立 CLI
 │   ├── start_live.bat / demo.py   # 真实入口与 CLI
 │   ├── agent.py / offline.py     # 工作流与离线模型
 │   ├── test_project.py           # 配置、安全与业务回归
