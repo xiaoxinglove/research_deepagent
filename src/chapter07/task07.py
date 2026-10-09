@@ -198,13 +198,7 @@ assert "英文" in memory_content
 
 print("✓ 对话 1：长期记忆写入成功")
 
-# 对话 2
-#
-# 注意：
-# 这是全新的 thread_id。
 # 如果还能读到偏好，就证明记忆跨 Thread。
-
-
 print("\n")
 print("=" * 60)
 print("对话 2：新 Thread 验证长期记忆")
